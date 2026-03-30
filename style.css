@@ -1,0 +1,425 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Netflix Sans';
+}
+
+@font-face {
+    font-family: 'Netflix Sans';
+    src: url('./fonts/NetflixSans-Regular.otf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Netflix Sans';
+    src: url('./fonts/NetflixSans-Bold.otf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Netflix Sans';
+    src: url('./fonts/NetflixSans-Light.otf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Netflix Sans';
+    src: url('./fonts/NetflixSans-Medium.otf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+main  {
+    position: relative;
+    z-index: 0;
+}
+
+header {
+    position: relative;
+    z-index: 2;
+}
+
+nav {
+    height: 74px;
+    width: 100vw;
+    position: fixed;
+    color: white;
+    background: linear-gradient(to bottom, black, transparent);
+}
+
+nav.scrolled {
+    background: black;
+}
+
+.navitems {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#logo {
+    height: 70px;
+    margin-left: 40px;
+}
+
+.innernav {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.lnav {
+    margin: 7px;
+    font-size: small;
+}
+
+.ltext {
+    text-decoration: none;
+    color: #e5e5e5;
+}
+
+#current {
+    color: white;
+    font-size: medium;
+    font-weight: 700;
+}
+
+.rnav {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    position: absolute;
+    right: 40px;
+    align-self: center;
+}
+
+.fa-magnifying-glass {
+    font-size: x-large;
+    color: white;
+}
+
+.buttonicon {
+    border: none;
+    background-color: transparent;
+}
+
+#search:hover {
+    cursor: pointer;
+}
+
+#kid {
+    color: white;
+    font-size: small;
+    position: relative;
+    bottom: 0px;
+}
+
+.fa-bell {
+    font-size: x-large;
+    color: white;
+}
+
+header:has(.fa-bell:hover) .notipanel {
+    opacity: 0.8;
+}
+
+.profile {
+    display: flex;
+    gap: 5px;
+}
+
+.profileimg {
+    height: 40px;
+    border-radius: 15%;
+}
+
+.fa-sort-down {
+    margin-top: 10px;
+}
+
+.notipanel {
+    height: 100px;
+    width: 300px;
+    position: fixed;
+    text-align: center;
+    color: #e5e5e5;
+    background-color: black;
+    opacity: 0;
+    transition: 0.5s;
+    top: 82px;
+    right: 100px;
+    border-top: 2px solid white;
+}
+
+header:has(.profileimg:hover) .propanel {
+    opacity: 0.8;
+    display: block;
+}
+
+.propanel:hover {
+    opacity: 0.8;
+    display: block;
+}
+
+.propanel {
+    width: 225px;
+    height: 325px;
+    position: fixed;
+    color: #e5e5e5;
+    background-color: black;
+    opacity: 0;
+    display: none;
+    transition: 0.5s;
+    top: 82px;
+    right: 30px;
+    padding: 15px;
+}
+
+.id {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.ppicon {
+    font-size: 35px;
+    margin: 5px;
+}
+
+.ppi {
+    margin: 5px;
+    display: inline-block;
+}
+
+hr {
+    margin: 5px;
+}
+
+#signout {
+    text-align: center;
+    position: relative;
+    top: 10px;
+}
+
+.id:hover {
+    cursor: pointer;
+}
+
+#signout:hover {
+    cursor: pointer;
+}
+
+#nptext {
+    margin-top: 40px;
+}
+
+.fa-sort-up {
+    position: relative;
+    top: -10px;
+    left: 131px;
+    font-size: large;
+}
+
+.hero-section {
+    width: 100vw;
+    position: relative;
+    top: 0px;
+    z-index: -1;
+}
+
+#onepunch {
+    width: 100vw;
+}
+
+.lowergrad {
+    height: 170px;
+    width: 100vw;
+    background: linear-gradient(to top, black, transparent);
+    position: absolute;
+    top: 600px;
+}
+
+.leftgrad {
+    z-index: 0;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 764px;
+    width: 30vw;
+    background: linear-gradient(to right, rgb(43, 42, 42,0.5), transparent);
+}
+
+#title {
+    position: absolute;
+    z-index: 1;
+    left: 50px;
+    top: 170px;
+    height: 200px;
+}
+
+#description {
+    position: absolute;
+    left: 50px;
+    top: 390px;
+    color: white;   
+    z-index: 1;
+}
+
+#play {
+    height: 45px;
+    width: 110px;
+    border-radius: 7px;
+    border: none;
+    background-color: white;
+    color: black;
+    position: absolute;
+    z-index: 1;
+    left: 50px;
+    top: 470px;
+    font-size: large;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#play:hover {
+    opacity: 0.7;
+}
+
+#info {
+    height: 45px;
+    width: 160px;
+    border-radius: 7px;
+    border: none;
+    background-color: rgb(95, 93, 93,0.8);
+    color: white;
+    position: absolute;
+    z-index: 1;
+    left: 170px;
+    top: 470px;
+    font-size: large;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#info:hover {
+    opacity: 0.7;
+}
+
+.library {
+    background-color: black;
+    width: 100vw;
+    height: 110vh;
+    position: relative;
+    top: -7px;
+    color: white;
+}
+
+h3 {
+    position: relative;
+    left: 50px;
+}
+
+#first {
+    top: -180px;
+}
+
+.recimg {
+    height: 130px;
+    border-radius: 5px;
+}
+
+.recflex {
+    display: flex;
+    gap: 5px;
+    position: relative;
+    left: 50px;
+}
+
+.rec1p{
+    top: -170px;
+}
+
+#second {
+    top: -120px;
+}
+
+.rec2p {
+    top: -110px;
+}
+
+#third {
+    top: -60px;
+}
+
+.rec3p {
+    top: -50px;
+} 
+
+#fourth {
+    top: 0px;
+}
+
+.rec4p {
+    top: 10px;
+}
+
+body {
+    background-color: black;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    width: 100vw;
+    height: 200px;
+    position: absolute;
+    bottom: opx;
+}
+
+.Socials {
+    position: relative;
+    left: 190px;
+}
+
+.sicon {
+    font-size: 25px;
+    margin: 10px;
+}
+
+.moreoptions {
+    height: 100px;
+    width: 200px;
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    color: grey;
+    font-size: small;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.mo1 {
+    left: 190px;
+}
+
+.mo2 {
+    left: 200px;
+}
+
+.mo3 {
+    left: 210px;
+}
+
+.mo4 {
+    left: 220px;
+}
